@@ -7,11 +7,11 @@
 
 ##目录
 
--  [智联, 58, 51招聘网站自动刷新插件](#zhaoPin "点击跳转至:招聘插件")
--  [垂直滑动的导航插件](#Vertical_sliding_navigation_plug-in "点击跳转至:Vertical_sliding_navigation_plug-in插件")
--  [无缝轮播插件](#SeamlessShuffling "点击跳转至:SeamlessShuffling插件")
--  [JS数组方法的补丁](#util "点击跳转至:util补丁")
--  [放大镜插件](#magnifier "点击跳转至:magnifier插件")
+-  [智联, 58, 51招聘网站自动刷新插件](#user-content-zhaoPin "点击跳转至:招聘插件")
+-  [垂直滑动的导航插件](#user-content-Vertical_sliding_navigation_plug-in "点击跳转至:Vertical_sliding_navigation_plug-in插件")
+-  [无缝轮播插件](#user-content-SeamlessShuffling "点击跳转至:SeamlessShuffling插件")
+-  [JS数组方法的补丁](#user-content-util "点击跳转至:util补丁")
+-  [放大镜插件](#user-content-magnifier "点击跳转至:magnifier插件")
 
 ... 待续
 
@@ -68,7 +68,7 @@ StartRefresh_58("my.58.com"); // 58
 
  
 
-[返回顶部](#Lib)
+[返回顶部](#user-content-Lib)
 
 ---
 
@@ -174,7 +174,7 @@ div.accordion_container
 element 为最上级元素, `.jaccordion() `方法会遍历 element 的子元素, 
 
 
-[返回顶部](#Lib)
+[返回顶部](#user-content-Lib)
 
 ---
 
@@ -220,7 +220,7 @@ div
 ```
 
 
-[返回顶部](#Lib)
+[返回顶部](#user-content-Lib)
 
 ---
 
@@ -238,7 +238,7 @@ div
 
 
 
-[返回顶部](#Lib)
+[返回顶部](#user-content-Lib)
 
 
 ---
@@ -272,6 +272,6 @@ imgObj.setAttribute("bigsrc", imgObj.src);
 ```
 
 
-[返回顶部](#Lib)
+[返回顶部](#user-content-Lib)
 
 ---
