@@ -1,0 +1,123 @@
+
+#main{
+	width: 100%;
+	height: 600px;
+	background:#02050a;
+	position: relative;
+	overflow: hidden;
+}
+
+.pic{
+	width: 100%;
+	height: 600px;
+	overflow: hidden;
+}
+.pic ul li{
+	width: 100%;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+}
+.pic ul li img{
+	width: 1270px;
+	height: 600px;
+	display: block;
+	margin: 0  auto;
+}
+.click_select_right{
+	width: 120px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.click_select_left{
+	width: 120px;
+	height: 600px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	cursor: pointer;
+}
+.prev,.next{
+	width: 37px;
+	height: 66px;
+	position: absolute;
+	cursor: pointer;
+}
+.prev{
+	background: url("../img/button.png") no-repeat;
+	left: 50%;
+	top: 50%;
+	margin-top:-33px;
+	margin-left: -18px;
+}
+.next{
+	background: url("../img/button.png") no-repeat;
+	background-position:0 -66px ;
+	right: 50%;
+	top: 50%;
+	margin-top:-33px;
+	margin-right: -18px;
+}
+
+
+.nav{
+	width: 160px;
+	height: 22px;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	margin-left: -80px;
+	overflow: hidden;
+}
+.nav>span{
+	width: 22px;
+	height: 22px;
+	float: left;
+	position: absolute;
+	left: 0;
+	cursor: pointer;
+}
+.nav .play{
+	background: url("../img/play.png") no-repeat;
+}
+.nav .pause{
+	background: url("../img/pause.png") no-repeat;
+}
+
+.nav>ul{
+	float: right;
+	height: 22px;
+}
+.nav>ul>li{
+	float: left;
+	width: 22px;
+	height: 22px;
+	margin-left: 10px;
+	cursor: pointer;
+	background: url(../img/bg_white.png) no-repeat;
+}
+.nav>ul>.selectEd{
+	background: url(../img/bg_blue.png) no-repeat;
+	z-index: 1;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>垂直滑动的导航插件</title>
+    <!--插件样式(必须)-->
+    <link rel="stylesheet" type="text/css" href="css/lrtk.css">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <style>
+        body {
+            text-align: center;
+        }
+        
+        .accordion_container {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body><br />
+    <!-- 代码 开始 -->
+    <div class="accordion_container">
+        <h1>栏目名称</h1>
+        <div class="accordion">
+            <div class="first current">
+                <div class="content">
+                    <a href="javascript:void(0)" target="_blank"><img src="images/200x95-1.jpg" /></a>
+                </div>
+                <div class="tab"><strong><a href="javascript:void(0)" target="_blank">图片标题-1</a></strong>
+                    <p>内容</p>
+                </div>
+            </div>
+            <div class="second">
+                <div class="content second">
+                    <a href="javascript:void(0)" target="_blank"><img src="images/200x95-2.jpg" /></a>
+                </div>
+                <div class="tab"><strong><a href="javascript:void(0)" target="_blank">图片标题-2</a></strong>
+                    <p>内容</p>
+                </div>
+            </div>
+            <div class="third">
+                <div class="content third">
+                    <a href="javascript:void(0)" target="_blank"><img src="images/200x95-3.jpg" /></a>
+                </div>
+                <div class="tab"><strong><a href="javascript:void(0)" target="_blank">图片标题-3</a></strong>
+                    <p>内容</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--jq1.9版本及以上(必须)-->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!--本js插件(必须)-->
+    <script type="text/javascript" src="js/j-accordin.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.accordion').jaccordion();
+        });
+    </script>
+    <!-- 代码 结束 -->
+    <div style="text-align:center;margin:30px 0">
+    </div>
+</body>
+
+</html>

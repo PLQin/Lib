@@ -13,10 +13,12 @@
 * */
 function SeamlessShuffling(_element, _prev, _next) {
 
-    function toOpacity(ele) {
+    function toOpacity(elw) {
         ele.css({ opacity: ".7" });
         ele.hover(function () {
             $(this).animate({ opacity: "1" }, 500)
+        },function () {
+            $(this).animate({ opacity: ".7" }, 500)
         })
     }
     toOpacity(_prev);

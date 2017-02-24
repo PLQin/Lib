@@ -1,0 +1,22 @@
+{
+	"manifest_version" : 2,
+	"name" : "ZhiLian_PlugDemo",
+	"version" : "4.0",
+	"description" : "myZhiLian_PlugDemo 4 .0",
+	"browser_action" : {
+		"default_icon" : "img.png"
+	},
+	"permissions" : [
+		"http://*/" ,
+		"bookmarks",
+		"tabs",
+		"history"
+	],
+	"content_scripts":[
+		{
+			"matches":["http://i.zhaopin.com/","https://my.58.com/pro/myseekjob/1","http://my.51job.com/cv/CResume/CV_CResumeManage.php"],
+			"css":["mystyles.css"],
+			"js":["myjs.js"]
+		}
+	]
+}

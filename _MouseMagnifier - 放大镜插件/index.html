@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>图片放大镜Demo</title>
+	<link rel="stylesheet" type="text/css" href="../reset.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<script src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<div class="box">
+		<div class="upload">
+			<a href="">
+				<!--type="file" 元素上传文件触发事件 :获得焦点并且内容发生改变后 -->
+				<!--如果程序可以让用户选择多个文件,记得要在input元素上加上multiple属性：-->
+				<input type="file" onchange="upload(this)">
+			</a>
+			<input type="text" id="fileName">
+		</div>
+		<div class="showPhoto">
+			<img src="" alt="" id="showImg">
+			<div id="hideWhiteBox"></div>
+		</div>
+	</div>
+	<script src="js/magnifier.js"></script>
+	<script src="js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+
+</html>

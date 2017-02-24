@@ -1,0 +1,38 @@
+
+body, p, dl, dd, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend {
+    margin: 0;
+}
+ul,li,ol{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.clearfix{
+	zoom:1;
+}
+.clearfix:after{
+	content: "";
+	height: 0;
+	display: block;
+	clear: both;
+}
+
+/*----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

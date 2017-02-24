@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	// 屏蔽报错
+	function SlyarErrors(){return true}window.onerror=SlyarErrors;
+
+
+	// demo1 利用函数的相互调用
+	zhiLian();
+	function zhiLian(){
+		setTimeout(function(){
+			var Astart = document.querySelector(".close>img");
+			Astart == null ? Refresh() : IKnow();
+		},200)
+	}
+	function Refresh(){ // 点击刷新
+		setTimeout(function(){
+			var Aclick = document.querySelector(".myLink>a");
+			Aclick.click();
+			zhiLian();
+		},200)
+	}
+	function IKnow(){ // 点击知道
+		setTimeout(function(){
+			var Astart = document.querySelector(".close>img");
+			Astart.click();
+			zhiLian();
+		},200)
+	}
+
+	// demo2 利用定时器
+	var Aclick = document.querySelector(".myLink>a");
+	setInterval(function(){
+		var Astart = document.querySelector(".close>img");
+		if(Astart != null){
+			setTimeout(function(){
+				Astart.click()	
+			},1000)
+		}else{
+			Aclick.click(); 
+		}
+	},1000)
+
+</script>
+</body>
+</html>

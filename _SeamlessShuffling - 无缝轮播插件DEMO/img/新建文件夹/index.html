@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JS添加元素,实现大量数据注入</title>
+</head>
+<body>
+	<h2>大搜车全国开放城市大全</h2>
+	<script>
+
+		var data = [
+			{
+				remen : "热门城市" ,
+				neireng : "北京 宁波 深圳 厦门 成都"
+			},
+			{
+				remen : "北京" ,
+				neireng : ""
+			},
+			{
+				remen : "新疆" ,
+				neireng : "乌鲁木齐"
+			},
+			{
+				remen : "辽宁" ,
+				neireng : "长沙 湘潭"
+			},
+			{
+				remen : "湖南" ,
+				neireng : "长沙 湘潭"
+			},
+			{
+				remen : "河北" ,
+				neireng : "石家庄 唐山 保定 沧州 秦皇岛 廊坊 邯郸"
+			}
+		];
+
+		function createBox(argument){
+			for(var i = 0;i<argument.length;i++){
+				var h3=document.createElement('h3'),
+					h3Decration = document.createTextNode(argument[i].neireng),
+					fragment = document.createDocumentFragment(); // 文档碎片
+				h3.appendChild(document.createTextNode(argument[i].remen));
+				fragment.appendChild(h3);
+				fragment.appendChild(h3Decration);
+				document.body.appendChild(fragment);
+			}
+		}
+		createBox(data);
+
+	</script>
+</body>
+</html>
