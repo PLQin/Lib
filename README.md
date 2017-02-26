@@ -12,6 +12,7 @@
 -  [无缝轮播插件](#user-content-seamlessshuffling "点击跳转至:SeamlessShuffling插件")
 -  [JS数组方法的补丁](#user-content-util "点击跳转至:util补丁")
 -  [放大镜插件](#user-content-magnifier "点击跳转至:magnifier插件")
+-  [单页/全屏滚动插件](#onepage-scroll "点击跳转至:onepage-scroll插件")
 
 ... 待续
 
@@ -160,8 +161,8 @@ div.accordion_container
 
 > lrtk.css :
  
-:   ` .current`类(这个类没有样式): 保留类
-	 在js中这` .current` 类, 当鼠标移入时, 被js动态添加此类 ;
+:   ` .current`类(这个类没有样式): 保留类 ;
+	 当鼠标移入元素时, 被js动态添加此类 ;
 
 
 
@@ -275,3 +276,112 @@ imgObj.setAttribute("bigsrc", imgObj.src);
 [返回顶部](#user-content-lib)
 
 ---
+
+
+
+### 单页/全屏滚动插件 jquery.onepage-scroll.js :
+#####onepage-scroll
+
+插件(非原创) : 使用 jQuery框架  , 使用了 CSS3 `transform` 属性，所以不兼容 IE10 以下的浏览器。可以设置 `responsiveFallback: true` 使页面在 IE8、IE9 中能够正常浏览。
+
+> 插件的特点 : 
+
+-  （不）显示右侧圆点项目导航
+-  （不）显示命名锚记
+-  循环/禁止循环
+-  回退（使用浏览器自带滚动）/指定回退
+-  支持键盘控制，左右上下/ Page Up / Page Donw / Home / End 等
+-  水平/横向滚动
+-  回调函数
+
+
+
+>使用方法（必须的）：
+
+``` 
+<link rel="stylesheet" href="css/onepage-scroll.css">
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.onepage-scroll.min.js"></script>
+<script>
+	$(function(){
+		/* 元素调用 onepage_scroll() 方法
+		@param element 
+				包含全部滚动页面的父元素
+		*/
+		$(element).onepage_scroll();
+	});
+</script>
+```
+
+
+
+>DOM 结构 : 
+
+```
+<div class="main">
+    <section>第一屏</section>
+    <section>第二屏</section>
+    <section>第三屏</section>
+    <section>第四屏</section>
+</div>
+```
+
+
+>jquery.onepage-scroll.js :
+
+ `onepage_scroll()` 方法 : onepage-scroll.js 在jQuery对象原型上封装的滚动方法
+ 
+```
+/*
+		插件通过为jQuery 对象原型上添加方法: onepage_scroll() ;
+		实现: 单页/全屏滚动
+			@param element 
+				[Obj]	包含全部滚动页面的父元素
+			@param sectionContainer    
+				[String] @element元素下的 单页/全屏滚动页面, 可以是标签或 class
+			@param easing    
+				[String] 动画过度效果, 可选 ease(默认值) / linear / ease-in
+			@param animationTime    
+				[Number] 动画过度时间, 以毫秒为单位, 默认值 : 1000 ;
+			@param pagination    
+				[Boolean] 显示右侧圆点项目导航, 默认为: ture ;
+			@param updateURL    
+				[Boolean] URL 显示命名锚记 , 默认为 : false ;
+			@param beforeMove    
+				[null] 滚动前的回调函数
+			@param afterMove    
+				[null] 滚动后的回调函数
+			@param loop    
+				[Boolean] 循环滚动, 默认为 : true ;
+			@param keyboard    
+				[Boolean] 键盘控制, 支持左右上下/ Page Up / Page Donw / Home / End, 默认为 : true ;
+			@param responsiveFallback    
+				[Boolean/Number] 回退, 即使用浏览器自带滚动, 默认为 false, 既不使用浏览器自带滚动。也可以指定一个固定值, 当页面的宽度小于这个值时, 将自动回退
+			@param direction    
+				[String] 页面滚动方向, 可选 vertical（垂直/竖向）和 horizontal（水平/横向）, 默认为 : vertical(垂直) ;
+			@return false ;
+ 		*/
+		$(function () {
+			$(element).onepage_scroll({
+				sectionContainer: "section",
+				easing: "ease",
+				animationTime: 1000,
+				pagination: true,
+				updateURL: false,
+				keyboard: true,
+				beforeMove: null,
+				afterMove: null,
+				loop: true,
+				keyboard: true,
+				responsiveFallback: false,
+				direction: 'vertical'
+			});
+		});
+```
+
+[返回顶部](#user-content-lib)
+
+---
+
+
+
