@@ -1,0 +1,33 @@
+{
+	"manifest_version" : 2, // 固定的 
+	"name" : "Lovely", // 插件名称 
+	"version" : "1.1",  // 插件使用的版本 
+	"description" : "Lovely 1.1",  // 插件的描述 
+	// 选项页
+	"options_page" :  "./options.html",
+	"browser_action" : {  // 插件加载后生成图标 
+		"default_icon" : "images/easyicon_net_16.ico", // 图标的图片 
+		"default_title": "Hello Lovely", // 鼠标移到图标显示的文字 
+		"default_popup": "./options.html" // 单击图标执行的文件  
+	},
+
+	// 允许插件访问的url	
+	"permissions" : [	
+		"http://*/" ,
+		"bookmarks",
+		"tabs",
+		"history",
+		"cookies"
+	],
+
+	"content_scripts":[
+		{	
+			// "matches":["http://i.zhaopin.com/","https://my.58.com/pro/myseekjob/1","http://my.51job.com/cv/CResume/CV_CResumeManage.php"],
+			"matches":["http://*/*","https://*/*"],
+			// "css":["my-sty.css"],
+			"js":["./Lovely.js", "ripple.js"]
+			// "run_at": "document_start"	  // 在document加载时执行该脚本 
+		}
+	]
+
+}
