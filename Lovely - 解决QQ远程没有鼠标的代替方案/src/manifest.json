@@ -14,6 +14,7 @@
 	// 允许插件访问的url	
 	"permissions" : [	
 		"http://*/" ,
+		"https://*/*" ,
 		"bookmarks",
 		"tabs",
 		"history",
@@ -28,6 +29,6 @@
 			"js":["./Lovely.js", "ripple.js"]
 			// "run_at": "document_start"	  // 在document加载时执行该脚本 
 		}
-	]
+	]	
 
 }

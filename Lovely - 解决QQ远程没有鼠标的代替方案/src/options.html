@@ -12,17 +12,47 @@
 		    box-shadow: 0 2px 16px -6px #ccc;
 		    cursor: pointer;
 		    color: #2d2d2d;
+		    margin: 15px;
 		}
 		button:active{
 			box-shadow: none;
 			color: #ccc;
 		}
+
+		.clearfix{
+			zoom : 1;
+		}
+		.clearfix:after{
+			content: "";
+			height: 0;
+			clear: both;
+			display: block;
+			visibility: hidden;;
+			overflow: hidden;;
+		}
+
+		.Lov-content{
+			min-width: 200px;
+		}
+		.Lov-content-p{
+			padding: 20px 0;
+			text-align: center;
+			font-weight: 600;			
+		}
+		.Lov-content-start{
+			float: left;
+		}
+		.Lov-content-stop{
+			float: right;
+		}
     </style>
 </head>
 <body>
-	
-	<button id="start-btn">启动</button>
-	<button id="stop-btn">关闭</button>
+	<div class="Lov-content clearfix">
+		<h2 class="Lov-content-p">嘿嘿嘿</h2>
+		<button class="Lov-content-start" id="start-btn">启用</button>
+		<button class="Lov-content-stop" id="stop-btn">关闭</button>
+	</div>
 	<script src="./popup.js" ></script>
 </body>
 </html>
