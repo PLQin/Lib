@@ -1,6 +1,7 @@
 /**
- *
- *
+ * 鼠标点击按钮有涟漪扩散
+ * ========================
+ * @qing 2017/8/9
  */
 function RippleEffect(element){
     this.element = element;
